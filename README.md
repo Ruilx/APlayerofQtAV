@@ -42,7 +42,7 @@ Qt报告既然是QPixmap产生的问题, 即依照QPixmap实例向下寻找, 在
 
 在我调试的stack中, 这个QPixmap是在VideoThread::run中构造的, 这个线程可能不是从QApplication启动的, 或QPixmap构造时未见qApp实例 **(猜测的)**, 导致assert失败
 
-![image-20220815002233197](E:\MyQt\APlayerofQtAV\data\github\image-20220815002233197.png) 
+![image-20220815002233197](data\github\image-20220815002233197.png) 
 
 ## 问题解决方案
 
