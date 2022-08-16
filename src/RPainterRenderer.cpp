@@ -41,9 +41,10 @@ bool RPainterRenderer::preparePixmap(const QtAV::VideoFrame &frame){
 
 	//d.image = QImage((uchar*)d.video_frame.constBits(), d.video_frame.width(), d.video_frame.height(), d.video_frame.bytesPerLine(), imageFormat);
 
-	if(d.image.size() != d.video_frame.size()){
+	if(d.image.width() != d.video_frame.bytesPerLine() / 4 || d.image.height() != d.video_frame.height()){
 		qDebug() << "Image rewrite!" << d.image;
-		d.image = QImage(d.video_frame.size(), imageFormat);
+		//d.image = QImage(d.video_frame.size(), imageFormat);
+		d.image = QImage(d.video_frame.bytesPerLine() / 4, d.video_frame.height(), imageFormat);
 	}
 
 	if(d.image.format() != imageFormat){

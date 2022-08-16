@@ -17,7 +17,8 @@ class MainW : public QMainWindow
 
 	QString dir = QApplication::applicationDirPath();
 
-	void closeEvent();
+	void closeEvent(QCloseEvent *e) override;
+	void resizeEvent(QResizeEvent *e) override;
 
 	QtAV::AVPlayer *player = new QtAV::AVPlayer(this);
 	//QtAV::VideoOutput *output = new QtAV::VideoOutput(this);

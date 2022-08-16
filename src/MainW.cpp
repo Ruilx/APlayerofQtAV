@@ -5,15 +5,24 @@
 #include <QMessageBox>
 #include <QScrollBar>
 
+#include <QResizeEvent>
+#include <QCloseEvent>
+
 //#include <QtOpenGL/QGLWidget>
 
-void MainW::closeEvent()
+void MainW::closeEvent(QCloseEvent *e)
 {
+	Q_UNUSED(e)
 	if(this->player != nullptr){
 		if(this->player->state() != QtAV::AVPlayer::StoppedState){
 			this->player->stop();
 		}
 	}
+}
+
+void MainW::resizeEvent(QResizeEvent *e)
+{
+	this->output->resizeRenderer(e->size());
 }
 
 MainW::MainW(QWidget *parent)
