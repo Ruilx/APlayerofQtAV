@@ -26,7 +26,7 @@ So I decided to build a simple player to fix the problem.
 
 ## Environment
 
-Because of the problem-solving is the most important, so the project not consider to complex scenes, therefore open-source to be a reference to your code.
+Because of the problem-solving is the most important thing, so the project not consider to complex scenes, therefore to open these source code to be a reference to yours.
 
 * Platform: Windows 8.1 x86_64 self-customized
 * QtSDK: Qt 5.12.12 MinGW 730_64
