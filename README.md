@@ -2,6 +2,8 @@
 
 原名: A Player of QtAV
 
+[English](data/github/Tiny QtAV Player.md)
+
 [QtAV](https://github.com/wang-bin/QtAV)是一个基于Qt和FFmpeg实现的多平台多媒体播放框架, 可以后端通过FFmpeg对多媒体素材进行转码, 并通过Qt组件的窗口/平台播放素材内容. 
 
 QtAV的官方网站在[http://www.qtav.org/](http://www.qtav.org/)
@@ -42,7 +44,7 @@ Qt报告既然是QPixmap产生的问题, 即依照QPixmap实例向下寻找, 在
 
 在我调试的stack中, 这个QPixmap是在VideoThread::run中构造的, 这个线程可能不是从QApplication启动的, 或QPixmap构造时未见qApp实例 **(猜测的)**, 导致assert失败
 
-![image-20220815002233197](data\github\image-20220815002233197.png) 
+![image-20220815002233197](data/github/image-20220815002233197.png) 
 
 ## 问题解决方案
 
